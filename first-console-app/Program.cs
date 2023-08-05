@@ -1,13 +1,14 @@
 ﻿
 namespace first_console_app;
 using System;
+using TellyClass;
 
 class Program
 {
-    /*  BOBSAYS: create simple console-app 
-    *   [x]  take input from user
-    *   [x]  increment string-counter whenever user enters a string
-    *   [x]  display string count when user enters "end"
+    /*  BOBSAYS: refactor this console-app 
+    *   [ ]  improve code readability 
+    *   [ ]  implement OOP
+    *   [ ]  use methods
     */
 
     static void Main(string[] args)
