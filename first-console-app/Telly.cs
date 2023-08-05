@@ -12,16 +12,37 @@ namespace TellyClass
             stringCount = 0;
         }
 
+        // getter
+        public int GetCount()
+        {
+            return stringCount;
+        }
+
         // methods
         public void AddOne()
         {
             stringCount++;
         }
 
-        // getter
-        public int GetCount()
+        // logic
+        public void StartCounting()
         {
-            return stringCount;
+            while (true)
+            {
+                Console.Write("\t: ");
+                string userInput = Console.ReadLine();
+
+                if (userInput.Equals("end"))
+                {
+                    break;
+                }
+                stringCount++;
+            }
+        }
+        public void ShowResult()
+        {
+            Console.WriteLine("\tString count: " + stringCount);
+
         }
     }
 }

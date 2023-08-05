@@ -6,32 +6,34 @@ using TellyClass;
 class Program
 {
     /*  BOBSAYS: refactor this console-app 
-    *   [ ]  improve code readability 
-    *   [ ]  implement OOP
-    *   [ ]  use methods
+    *   [x]  improve code readability 
+    *   [x]  implement OOP
+    *   [x]  use methods
     */
 
     static void Main(string[] args)
     {
-        int stringCount = 0;
+        Telly stringCounter = new Telly();
 
+        DisplayIntro();
+
+        stringCounter.StartCounting();
+        stringCounter.ShowResult();
+
+        DisplayOutro();
+
+        Console.ReadKey();
+
+    }
+
+    static void DisplayIntro()
+    {
         Console.WriteLine("\n\tWelcome to string telly!");
         Console.WriteLine("\tEnter string to continue or enter \"end\" to quit");
+    }
 
-        while (true)
-        {
-            Console.Write("\t: ");
-            string userInput = Console.ReadLine();
-
-            if (userInput.Equals("end"))
-            {
-                break;
-            }
-            stringCount++;
-        }
-
-        Console.WriteLine("\tString count: " + stringCount);
+    static void DisplayOutro()
+    {
         Console.WriteLine("\n\tThank You for using our app!");
-        Console.ReadKey();
     }
 }
