@@ -18,12 +18,6 @@ namespace TellyClass
             return stringCount;
         }
 
-        // methods
-        public void AddOne()
-        {
-            stringCount++;
-        }
-
         // logic
         public void StartCounting()
         {
