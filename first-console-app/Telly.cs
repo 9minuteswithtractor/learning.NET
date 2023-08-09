@@ -12,12 +12,6 @@ namespace TellyClass
             stringCount = 0;
         }
 
-        // getter
-        public int GetCount()
-        {
-            return stringCount;
-        }
-
         // logic
         public void StartCounting()
         {
