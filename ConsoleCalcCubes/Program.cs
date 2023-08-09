@@ -5,7 +5,7 @@
     [x] - practice OOP
     [x] - practice clean-code
     flow:
-        a. take input from user (whole numbers or string - "end" to exit)
+        a. take input from user (whole numbers or string "end" to exit)
         b. calculate and display cube of number
         c. exit app when string "end" is entered
 */
