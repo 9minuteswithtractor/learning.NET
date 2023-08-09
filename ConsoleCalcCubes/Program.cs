@@ -1,5 +1,5 @@
 
-/*  bobsays: code simple console-calculation-app
+/*  code simple console-calculation-app
 
     [x] - practice spotting code refactor necessaries / options
     [x] - practice OOP
@@ -20,7 +20,7 @@ namespace ConsoleCalcCubes
         static void Main(string[] args)
         {
             // PreStart processes:
-            Method process = new Method();
+            Calculation process = new Calculation();
 
             DisplayIntro();
 
@@ -41,14 +41,14 @@ namespace ConsoleCalcCubes
             Console.WriteLine("\tEnter \"end\" to exit app.");
         }
 
-        static void RunApp(Method process)
+        static void RunApp(Calculation process)
         {
             string userInput = process.GetInput();
             bool canContinue = process.IsValid(userInput);
 
             while (canContinue)
             {
-                int number = process.ConvertStringAsNumber();
+                int number = process.GetInt();
                 int cubedNumber = process.CubeNumber(number);
 
                 Console.WriteLine("\t" + cubedNumber);

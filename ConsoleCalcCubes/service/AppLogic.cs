@@ -2,13 +2,13 @@
 
 namespace AppLogic
 {
-	public class Method
+	public class Calculation
 	{
 		// attribute
 		private int numberAsInt;
 
 		// constructor
-		public Method()
+		public Calculation()
 		{
 			numberAsInt = 0;
 		}
@@ -17,32 +17,16 @@ namespace AppLogic
 		public string GetInput()
 		{
 			Console.Write("\t: ");
-
-			// optionally => this.numberAsString = Console.ReadLine();
-			// then it would be part og object ...then would need to 
-			// update main Program class
-
 			string userInput = Console.ReadLine();
 			return userInput;
-
 		}
 
 		public bool IsValid(string input)
 		{
-			// optional 
-
-			// if (input.Equals("end"))
-			// {
-			// 	return false;
-			// }
-
-			// the version below actually could be better as 
-			// no need for additional error handling ...
-
 			bool isInt = int.TryParse(input, out this.numberAsInt);
 			return isInt;
 		}
-		public int ConvertStringAsNumber() { return numberAsInt; } // see isVAlid()
+		public int GetInt() { return numberAsInt; }
 
 		public int CubeNumber(int number)
 		{
